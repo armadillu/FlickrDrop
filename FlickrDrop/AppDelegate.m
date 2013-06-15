@@ -31,7 +31,7 @@
     [dockTile setContentView:iv];
 	[dockTile setShowsApplicationBadge:YES];
 
-	dockProgress = [[NSProgressIndicator alloc] initWithFrame:NSMakeRect(0.0f, 0.0f, dockTile.size.width, 60)];
+	dockProgress = [[NSProgressIndicator alloc] initWithFrame:NSMakeRect(0.0f, 0.0f, dockTile.size.width, 20)];
     [dockProgress setStyle:NSProgressIndicatorBarStyle];
 	[dockProgress setUsesThreadedAnimation:YES];
 	[dockProgress setIndeterminate:NO];

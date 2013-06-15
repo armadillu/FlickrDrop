@@ -11,3 +11,7 @@ It uses an old version of ObjectiveFlickr framework.
 
 The first time you launch it, it will ask to authorize with flickr. 
 Should be as easy as following the steps.
+
+Once its authorized, just quit it, and drop images into its icon. Once they are all uploaded, it will quit on its own.
+
+Be aware, no error checking or anything fancy here!
