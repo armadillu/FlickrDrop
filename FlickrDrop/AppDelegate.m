@@ -75,9 +75,10 @@ int uploadedSoFar = 0;
 
 	NSString *tags = [NSString stringWithContentsOfFile:[NSString stringWithFormat:@"%@/FlickrTags.txt", [[[NSBundle mainBundle] bundlePath] stringByDeletingLastPathComponent]]];
 	NSString *desc = [NSString stringWithContentsOfFile:[NSString stringWithFormat:@"%@/FlickrDescription.txt", [[[NSBundle mainBundle] bundlePath] stringByDeletingLastPathComponent]]];
+	NSString *desc2 = [NSString stringWithFormat:@"%@\n\nUploaded With <a href='https://github.com/armadillu/FlickrDrop'>FlickrDrop</a>", desc];
 	NSArray * tagArray = [tags componentsSeparatedByString:@","];
 	for(NSString * file in filesToUpload){
-		[flickr uploadImageAt:file withDescription:desc title:[file lastPathComponent] tags:tagArray];
+		[flickr uploadImageAt:file withDescription:desc2 title:[file lastPathComponent] tags:tagArray];
 	}
 	[filesToUpload removeAllObjects];
 }
