@@ -1,0 +1,395 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BB74206A176C72EA00D0A9EC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB742069176C72EA00D0A9EC /* Cocoa.framework */; };
+		BB742074176C72EA00D0A9EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BB742072176C72EA00D0A9EC /* InfoPlist.strings */; };
+		BB742076176C72EA00D0A9EC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BB742075176C72EA00D0A9EC /* main.m */; };
+		BB74207A176C72EA00D0A9EC /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = BB742078176C72EA00D0A9EC /* Credits.rtf */; };
+		BB74207D176C72EA00D0A9EC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BB74207C176C72EA00D0A9EC /* AppDelegate.m */; };
+		BB742080176C72EA00D0A9EC /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB74207E176C72EA00D0A9EC /* MainMenu.xib */; };
+		BB74208D176C75E600D0A9EC /* Flickr.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB74208C176C75E600D0A9EC /* Flickr.xib */; };
+		BB742091176C75FF00D0A9EC /* flickr.png in Resources */ = {isa = PBXBuildFile; fileRef = BB74208F176C75FF00D0A9EC /* flickr.png */; };
+		BB742092176C75FF00D0A9EC /* domo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BB742090176C75FF00D0A9EC /* domo.jpg */; };
+		BB742093176C775700D0A9EC /* FlickrUploader.m in Sources */ = {isa = PBXBuildFile; fileRef = BB742089176C756E00D0A9EC /* FlickrUploader.m */; };
+		BB742094176C775900D0A9EC /* BatchDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = BB74208B176C756E00D0A9EC /* BatchDownloader.m */; };
+		BB742098176C777500D0A9EC /* BathFlickrPhotoInfoDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = BB742097176C777000D0A9EC /* BathFlickrPhotoInfoDownload.m */; };
+		BB9B7672176C91A30019962B /* ObjectiveFlickr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB9B7671176C91A30019962B /* ObjectiveFlickr.framework */; };
+		BB9B7673176C91AA0019962B /* ObjectiveFlickr.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = BB9B7671176C91A30019962B /* ObjectiveFlickr.framework */; };
+		BB9B7679176C937A0019962B /* flickrIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = BB9B7678176C937A0019962B /* flickrIcon.icns */; };
+		BB9B767B176C93A20019962B /* flickr.png in Resources */ = {isa = PBXBuildFile; fileRef = BB9B767A176C93A20019962B /* flickr.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BB74209A176C83AF00D0A9EC /* Copy Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BB9B7673176C91AA0019962B /* ObjectiveFlickr.framework in Copy Files */,
+			);
+			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		BB742066176C72EA00D0A9EC /* FlickrDrop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickrDrop.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB742069176C72EA00D0A9EC /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		BB74206C176C72EA00D0A9EC /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		BB74206D176C72EA00D0A9EC /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		BB74206E176C72EA00D0A9EC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BB742071176C72EA00D0A9EC /* FlickrDrop-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FlickrDrop-Info.plist"; sourceTree = "<group>"; };
+		BB742073176C72EA00D0A9EC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BB742075176C72EA00D0A9EC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BB742077176C72EA00D0A9EC /* FlickrDrop-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FlickrDrop-Prefix.pch"; sourceTree = "<group>"; };
+		BB742079176C72EA00D0A9EC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		BB74207B176C72EA00D0A9EC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BB74207C176C72EA00D0A9EC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BB74207F176C72EA00D0A9EC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		BB742088176C756E00D0A9EC /* FlickrUploader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlickrUploader.h; sourceTree = "<group>"; };
+		BB742089176C756E00D0A9EC /* FlickrUploader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlickrUploader.m; sourceTree = "<group>"; };
+		BB74208A176C756E00D0A9EC /* BatchDownloader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BatchDownloader.h; sourceTree = "<group>"; };
+		BB74208B176C756E00D0A9EC /* BatchDownloader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BatchDownloader.m; sourceTree = "<group>"; };
+		BB74208C176C75E600D0A9EC /* Flickr.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Flickr.xib; sourceTree = "<group>"; };
+		BB74208F176C75FF00D0A9EC /* flickr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flickr.png; sourceTree = "<group>"; };
+		BB742090176C75FF00D0A9EC /* domo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = domo.jpg; sourceTree = "<group>"; };
+		BB742095176C776800D0A9EC /* constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
+		BB742096176C777000D0A9EC /* BathFlickrPhotoInfoDownload.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BathFlickrPhotoInfoDownload.h; sourceTree = "<group>"; };
+		BB742097176C777000D0A9EC /* BathFlickrPhotoInfoDownload.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BathFlickrPhotoInfoDownload.m; sourceTree = "<group>"; };
+		BB9B7671176C91A30019962B /* ObjectiveFlickr.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ObjectiveFlickr.framework; sourceTree = "<group>"; };
+		BB9B7678176C937A0019962B /* flickrIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = flickrIcon.icns; path = ../flickrIcon.icns; sourceTree = "<group>"; };
+		BB9B767A176C93A20019962B /* flickr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flickr.png; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BB742063176C72EA00D0A9EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB74206A176C72EA00D0A9EC /* Cocoa.framework in Frameworks */,
+				BB9B7672176C91A30019962B /* ObjectiveFlickr.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BB74205D176C72EA00D0A9EC = {
+			isa = PBXGroup;
+			children = (
+				BB74208E176C75F700D0A9EC /* Resources */,
+				BB74206F176C72EA00D0A9EC /* FlickrDrop */,
+				BB742068176C72EA00D0A9EC /* Frameworks */,
+				BB742067176C72EA00D0A9EC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BB742067176C72EA00D0A9EC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BB742066176C72EA00D0A9EC /* FlickrDrop.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BB742068176C72EA00D0A9EC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BB9B7671176C91A30019962B /* ObjectiveFlickr.framework */,
+				BB742069176C72EA00D0A9EC /* Cocoa.framework */,
+				BB74206B176C72EA00D0A9EC /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BB74206B176C72EA00D0A9EC /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BB74206C176C72EA00D0A9EC /* AppKit.framework */,
+				BB74206D176C72EA00D0A9EC /* CoreData.framework */,
+				BB74206E176C72EA00D0A9EC /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		BB74206F176C72EA00D0A9EC /* FlickrDrop */ = {
+			isa = PBXGroup;
+			children = (
+				BB742099176C794D00D0A9EC /* upload */,
+				BB742095176C776800D0A9EC /* constants.h */,
+				BB742088176C756E00D0A9EC /* FlickrUploader.h */,
+				BB742089176C756E00D0A9EC /* FlickrUploader.m */,
+				BB74207B176C72EA00D0A9EC /* AppDelegate.h */,
+				BB74207C176C72EA00D0A9EC /* AppDelegate.m */,
+				BB74207E176C72EA00D0A9EC /* MainMenu.xib */,
+				BB74208C176C75E600D0A9EC /* Flickr.xib */,
+				BB742070176C72EA00D0A9EC /* Supporting Files */,
+			);
+			path = FlickrDrop;
+			sourceTree = "<group>";
+		};
+		BB742070176C72EA00D0A9EC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BB9B767A176C93A20019962B /* flickr.png */,
+				BB9B7678176C937A0019962B /* flickrIcon.icns */,
+				BB742071176C72EA00D0A9EC /* FlickrDrop-Info.plist */,
+				BB742072176C72EA00D0A9EC /* InfoPlist.strings */,
+				BB742075176C72EA00D0A9EC /* main.m */,
+				BB742077176C72EA00D0A9EC /* FlickrDrop-Prefix.pch */,
+				BB742078176C72EA00D0A9EC /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BB74208E176C75F700D0A9EC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BB74208F176C75FF00D0A9EC /* flickr.png */,
+				BB742090176C75FF00D0A9EC /* domo.jpg */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		BB742099176C794D00D0A9EC /* upload */ = {
+			isa = PBXGroup;
+			children = (
+				BB742096176C777000D0A9EC /* BathFlickrPhotoInfoDownload.h */,
+				BB742097176C777000D0A9EC /* BathFlickrPhotoInfoDownload.m */,
+				BB74208A176C756E00D0A9EC /* BatchDownloader.h */,
+				BB74208B176C756E00D0A9EC /* BatchDownloader.m */,
+			);
+			name = upload;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BB742065176C72EA00D0A9EC /* FlickrDrop */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB742083176C72EA00D0A9EC /* Build configuration list for PBXNativeTarget "FlickrDrop" */;
+			buildPhases = (
+				BB742062176C72EA00D0A9EC /* Sources */,
+				BB742063176C72EA00D0A9EC /* Frameworks */,
+				BB742064176C72EA00D0A9EC /* Resources */,
+				BB74209A176C83AF00D0A9EC /* Copy Files */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FlickrDrop;
+			productName = FlickrDrop;
+			productReference = BB742066176C72EA00D0A9EC /* FlickrDrop.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BB74205E176C72EA00D0A9EC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Oriol Ferrer Mesià";
+			};
+			buildConfigurationList = BB742061176C72EA00D0A9EC /* Build configuration list for PBXProject "FlickrDrop" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BB74205D176C72EA00D0A9EC;
+			productRefGroup = BB742067176C72EA00D0A9EC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BB742065176C72EA00D0A9EC /* FlickrDrop */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BB742064176C72EA00D0A9EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB742074176C72EA00D0A9EC /* InfoPlist.strings in Resources */,
+				BB74207A176C72EA00D0A9EC /* Credits.rtf in Resources */,
+				BB742080176C72EA00D0A9EC /* MainMenu.xib in Resources */,
+				BB74208D176C75E600D0A9EC /* Flickr.xib in Resources */,
+				BB742091176C75FF00D0A9EC /* flickr.png in Resources */,
+				BB742092176C75FF00D0A9EC /* domo.jpg in Resources */,
+				BB9B7679176C937A0019962B /* flickrIcon.icns in Resources */,
+				BB9B767B176C93A20019962B /* flickr.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BB742062176C72EA00D0A9EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB742076176C72EA00D0A9EC /* main.m in Sources */,
+				BB742094176C775900D0A9EC /* BatchDownloader.m in Sources */,
+				BB742098176C777500D0A9EC /* BathFlickrPhotoInfoDownload.m in Sources */,
+				BB742093176C775700D0A9EC /* FlickrUploader.m in Sources */,
+				BB74207D176C72EA00D0A9EC /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BB742072176C72EA00D0A9EC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB742073176C72EA00D0A9EC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BB742078176C72EA00D0A9EC /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB742079176C72EA00D0A9EC /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		BB74207E176C72EA00D0A9EC /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB74207F176C72EA00D0A9EC /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BB742081176C72EA00D0A9EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		BB742082176C72EA00D0A9EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		BB742084176C72EA00D0A9EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FlickrDrop/FlickrDrop-Prefix.pch";
+				INFOPLIST_FILE = "FlickrDrop/FlickrDrop-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		BB742085176C72EA00D0A9EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FlickrDrop/FlickrDrop-Prefix.pch";
+				INFOPLIST_FILE = "FlickrDrop/FlickrDrop-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BB742061176C72EA00D0A9EC /* Build configuration list for PBXProject "FlickrDrop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB742081176C72EA00D0A9EC /* Debug */,
+				BB742082176C72EA00D0A9EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB742083176C72EA00D0A9EC /* Build configuration list for PBXNativeTarget "FlickrDrop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB742084176C72EA00D0A9EC /* Debug */,
+				BB742085176C72EA00D0A9EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BB74205E176C72EA00D0A9EC /* Project object */;
+}

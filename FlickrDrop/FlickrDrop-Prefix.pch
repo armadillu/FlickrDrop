@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'FlickrDrop' target in the 'FlickrDrop' project
+//
+
+#ifdef __OBJC__
+	#import <Cocoa/Cocoa.h>
+#endif
