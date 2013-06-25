@@ -23,7 +23,7 @@
 	[progress setIndeterminate:NO];
 	[progress setNeedsDisplay:YES];
 	[progress display];
-
+	[self.window setLevel:NSScreenSaverWindowLevel];
 
 	dockTile = [[NSApplication sharedApplication] dockTile];
     NSImageView *iv = [[NSImageView alloc] init];
@@ -97,6 +97,8 @@ int uploadedSoFar = 0;
 
 	if (uploadedSoFar == numToUpload){
 		NSLog(@"All Done! bye bye!");
+		NSString * url = [NSString stringWithFormat:@"%@/PhotoStreamURL.txt", [[[NSBundle mainBundle] bundlePath] stringByDeletingLastPathComponent]];
+		[[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString: url] ];
 		[[NSApplication sharedApplication] terminate:self];
 	}
 }
