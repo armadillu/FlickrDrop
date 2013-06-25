@@ -97,9 +97,10 @@ int uploadedSoFar = 0;
 
 	if (uploadedSoFar == numToUpload){
 		NSLog(@"All Done! bye bye!");
-		NSString * url = [NSString stringWithFormat:@"%@/PhotoStreamURL.txt", [[[NSBundle mainBundle] bundlePath] stringByDeletingLastPathComponent]];
+		NSString * url = [NSString stringWithContentsOfFile: [NSString stringWithFormat:@"%@/PhotoStreamURL.txt", [[[NSBundle mainBundle] bundlePath] stringByDeletingLastPathComponent]]];
+		NSLog(@"opening URL %@", url);
 		[[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString: url] ];
-		[[NSApplication sharedApplication] terminate:self];
+		[[NSApplication sharedApplication] performSelector:@selector(terminate:) withObject:self afterDelay:1.0];
 	}
 }
 
