@@ -1,7 +1,7 @@
 //
 // OFXMLMapper.h
 //
-// Copyright (c) 2009 Lukhnos D. Liu (http://lukhnos.org)
+// Copyright (c) 2006-2014 Lukhnos D. Liu (http://lukhnos.org)
 //
 // Permission is hereby granted, free of charge, to any person
 // obtaining a copy of this software and associated documentation
@@ -27,9 +27,13 @@
 
 #import <Foundation/Foundation.h>
 
-extern NSString *OFXMLTextContentKey;
+extern NSString *const OFXMLTextContentKey;
 
+#if (MAC_OS_X_VERSION_10_6 && MAC_OS_X_VERSION_MIN_REQUIRED >= MAC_OS_X_VERSION_10_6) || (__IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_2_0)
+@interface OFXMLMapper : NSObject <NSXMLParserDelegate>
+#else
 @interface OFXMLMapper : NSObject
+#endif
 {
     NSMutableDictionary *resultantDictionary;
 	
@@ -43,7 +47,7 @@ extern NSString *OFXMLTextContentKey;
 @interface NSDictionary (OFXMLMapperExtension)
 - (NSString *)textContent;
 
-#if MAC_OS_X_VERSION_MIN_REQUIRED > MAC_OS_X_VERSION_10_4
+#if MAC_OS_X_VERSION_MAX_ALLOWED > MAC_OS_X_VERSION_10_4
 @property (nonatomic, readonly) NSString *textContent;
 #endif
 @end

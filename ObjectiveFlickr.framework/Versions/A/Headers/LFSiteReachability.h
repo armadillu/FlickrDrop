@@ -29,8 +29,8 @@
 #import <SystemConfiguration/SystemConfiguration.h>
 #import "LFHTTPRequest.h"
 
-extern NSString *LFSiteReachabilityConnectionTypeWiFi;
-extern NSString *LFSiteReachabilityConnectionTypeWWAN;
+extern NSString *const LFSiteReachabilityConnectionTypeWiFi;
+extern NSString *const LFSiteReachabilityConnectionTypeWWAN;
 
 @class LFSiteReachability;
 
@@ -60,7 +60,13 @@ extern NSString *LFSiteReachabilityConnectionTypeWWAN;
 // "forget about network, it doesn't exist at all"
 - (BOOL)networkConnectivityExists;	
 
+#if MAC_OS_X_VERSION_MAX_ALLOWED <= MAC_OS_X_VERSION_10_4 
+- (id<LFSiteReachabilityDelegate>)delegate;
+- (NSURL*)siteURL;
+- (NSTimeInterval)timeoutInterval;
+#else
 @property (assign, nonatomic) id<LFSiteReachabilityDelegate> delegate;
 @property (retain, nonatomic) NSURL *siteURL;
 @property (nonatomic) NSTimeInterval timeoutInterval;
+#endif
 @end

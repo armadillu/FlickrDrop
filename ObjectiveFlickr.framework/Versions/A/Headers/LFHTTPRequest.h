@@ -33,13 +33,13 @@
     #import <CFNetwork/CFProxySupport.h>
 #endif
 
-extern NSString *LFHTTPRequestConnectionError;
-extern NSString *LFHTTPRequestTimeoutError;
-extern NSTimeInterval LFHTTPRequestDefaultTimeoutInterval;
-extern NSString *LFHTTPRequestWWWFormURLEncodedContentType;
-extern NSString *LFHTTPRequestGETMethod;
-extern NSString *LFHTTPRequestHEADMethod;
-extern NSString *LFHTTPRequestPOSTMethod;
+extern NSString *const LFHTTPRequestConnectionError;
+extern NSString *const LFHTTPRequestTimeoutError;
+extern const NSTimeInterval LFHTTPRequestDefaultTimeoutInterval;
+extern NSString *const LFHTTPRequestWWWFormURLEncodedContentType;
+extern NSString *const LFHTTPRequestGETMethod;
+extern NSString *const LFHTTPRequestHEADMethod;
+extern NSString *const LFHTTPRequestPOSTMethod;
 
 @interface LFHTTPRequest : NSObject
 {
@@ -50,14 +50,14 @@ extern NSString *LFHTTPRequestPOSTMethod;
     NSString *_contentType;
 
     NSDictionary *_requestHeader;
-    
+
     NSMutableData *_receivedData;
     NSString *_receivedContentType;
-    
+
     CFReadStreamRef _readStream;
     NSTimer *_receivedDataTracker;
     NSTimeInterval _lastReceivedDataUpdateTime;
-    
+
     NSTimer *_requestMessageBodyTracker;
     NSTimeInterval _lastSentDataUpdateTime;
 #if MAC_OS_X_VERSION_MAX_ALLOWED > MAC_OS_X_VERSION_10_4
@@ -74,10 +74,11 @@ extern NSString *LFHTTPRequestPOSTMethod;
 
     void *_readBuffer;
     size_t _readBufferSize;
-    
+
     id _sessionInfo;
-    
+
     BOOL _shouldWaitUntilDone;
+	NSMessagePort *_synchronousMessagePort;
 }
 
 - (id)init;
@@ -98,27 +99,18 @@ extern NSString *LFHTTPRequestPOSTMethod;
 
 - (NSData *)getReceivedDataAndDetachFromRequest;
 
-- (NSDictionary *)requestHeader;
-- (void)setRequestHeader:(NSDictionary *)requestHeader;
 - (NSTimeInterval)timeoutInterval;
 - (void)setTimeoutInterval:(NSTimeInterval)timeoutInterval;
-- (NSString *)userAgent;
-- (void)setUserAgent:(NSString *)userAgent;
-- (NSString *)contentType;
-- (void)setContentType:(NSString *)contentType;
 - (NSData *)receivedData;
+- (NSString *)receivedContentType;
 #if MAC_OS_X_VERSION_MAX_ALLOWED > MAC_OS_X_VERSION_10_4
 - (NSUInteger)expectedDataLength;
 #else
 - (unsigned int)expectedDataLength;
 #endif
-- (id)delegate;
-- (void)setDelegate:(id)delegate;
 
-- (void)setSessionInfo:(id)aSessionInfo;
-- (id)sessionInfo;
+#if MAC_OS_X_VERSION_MAX_ALLOWED > MAC_OS_X_VERSION_10_4
 
-#if MAC_OS_X_VERSION_MIN_REQUIRED > MAC_OS_X_VERSION_10_4
 @property (copy) NSDictionary *requestHeader;
 @property (assign) NSTimeInterval timeoutInterval;
 @property (copy) NSString *userAgent;
@@ -128,7 +120,24 @@ extern NSString *LFHTTPRequestPOSTMethod;
 @property (assign) id delegate;
 @property (retain) id sessionInfo;
 @property (assign) BOOL shouldWaitUntilDone;
+@property (readonly) BOOL isRunning;
+
+#else
+
+- (NSDictionary *)requestHeader;
+- (void)setRequestHeader:(NSDictionary *)requestHeader;
+- (NSString *)userAgent;
+- (void)setUserAgent:(NSString *)userAgent;
+- (NSString *)contentType;
+- (void)setContentType:(NSString *)contentType;
+- (id)delegate;
+- (void)setDelegate:(id)delegate;
+- (void)setSessionInfo:(id)aSessionInfo;
+- (id)sessionInfo;
+
+
 #endif
+
 @end
 
 @interface NSObject (LFHTTPRequestDelegate)

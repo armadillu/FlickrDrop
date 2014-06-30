@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB702BAD1962144200D6471C /* ObjectiveFlickr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB702BAC1962144200D6471C /* ObjectiveFlickr.framework */; };
+		BB702BAE1962144F00D6471C /* ObjectiveFlickr.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = BB702BAC1962144200D6471C /* ObjectiveFlickr.framework */; };
 		BB74206A176C72EA00D0A9EC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB742069176C72EA00D0A9EC /* Cocoa.framework */; };
 		BB742074176C72EA00D0A9EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BB742072176C72EA00D0A9EC /* InfoPlist.strings */; };
 		BB742076176C72EA00D0A9EC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BB742075176C72EA00D0A9EC /* main.m */; };
@@ -19,8 +21,6 @@
 		BB742093176C775700D0A9EC /* FlickrUploader.m in Sources */ = {isa = PBXBuildFile; fileRef = BB742089176C756E00D0A9EC /* FlickrUploader.m */; };
 		BB742094176C775900D0A9EC /* BatchDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = BB74208B176C756E00D0A9EC /* BatchDownloader.m */; };
 		BB742098176C777500D0A9EC /* BathFlickrPhotoInfoDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = BB742097176C777000D0A9EC /* BathFlickrPhotoInfoDownload.m */; };
-		BB9B7672176C91A30019962B /* ObjectiveFlickr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB9B7671176C91A30019962B /* ObjectiveFlickr.framework */; };
-		BB9B7673176C91AA0019962B /* ObjectiveFlickr.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = BB9B7671176C91A30019962B /* ObjectiveFlickr.framework */; };
 		BB9B7679176C937A0019962B /* flickrIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = BB9B7678176C937A0019962B /* flickrIcon.icns */; };
 		BB9B767B176C93A20019962B /* flickr.png in Resources */ = {isa = PBXBuildFile; fileRef = BB9B767A176C93A20019962B /* flickr.png */; };
 /* End PBXBuildFile section */
@@ -32,7 +32,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				BB9B7673176C91AA0019962B /* ObjectiveFlickr.framework in Copy Files */,
+				BB702BAE1962144F00D6471C /* ObjectiveFlickr.framework in Copy Files */,
 			);
 			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -40,6 +40,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BB702BAC1962144200D6471C /* ObjectiveFlickr.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ObjectiveFlickr.framework; sourceTree = "<group>"; };
 		BB742066176C72EA00D0A9EC /* FlickrDrop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickrDrop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB742069176C72EA00D0A9EC /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		BB74206C176C72EA00D0A9EC /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -63,7 +64,6 @@
 		BB742095176C776800D0A9EC /* constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
 		BB742096176C777000D0A9EC /* BathFlickrPhotoInfoDownload.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BathFlickrPhotoInfoDownload.h; sourceTree = "<group>"; };
 		BB742097176C777000D0A9EC /* BathFlickrPhotoInfoDownload.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BathFlickrPhotoInfoDownload.m; sourceTree = "<group>"; };
-		BB9B7671176C91A30019962B /* ObjectiveFlickr.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ObjectiveFlickr.framework; sourceTree = "<group>"; };
 		BB9B7678176C937A0019962B /* flickrIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = flickrIcon.icns; path = ../flickrIcon.icns; sourceTree = "<group>"; };
 		BB9B767A176C93A20019962B /* flickr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flickr.png; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -74,7 +74,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB74206A176C72EA00D0A9EC /* Cocoa.framework in Frameworks */,
-				BB9B7672176C91A30019962B /* ObjectiveFlickr.framework in Frameworks */,
+				BB702BAD1962144200D6471C /* ObjectiveFlickr.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,7 +102,7 @@
 		BB742068176C72EA00D0A9EC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BB9B7671176C91A30019962B /* ObjectiveFlickr.framework */,
+				BB702BAC1962144200D6471C /* ObjectiveFlickr.framework */,
 				BB742069176C72EA00D0A9EC /* Cocoa.framework */,
 				BB74206B176C72EA00D0A9EC /* Other Frameworks */,
 			);
@@ -341,11 +341,13 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlickrDrop/FlickrDrop-Prefix.pch";
 				INFOPLIST_FILE = "FlickrDrop/FlickrDrop-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -358,11 +360,13 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlickrDrop/FlickrDrop-Prefix.pch";
 				INFOPLIST_FILE = "FlickrDrop/FlickrDrop-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
